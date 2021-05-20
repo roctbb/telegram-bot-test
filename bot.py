@@ -42,6 +42,10 @@ def unsubscribe(message):
 thread = threading.Thread(target=mailing)
 thread.start()
 
-bot.polling(none_stop=True)
+while True:
+    try:
+        bot.polling(none_stop=True)
+    except:
+        pass
 
 
